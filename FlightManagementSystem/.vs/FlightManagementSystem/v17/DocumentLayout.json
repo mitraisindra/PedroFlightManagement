@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\Coding Battle CDC\\FlightManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{690E683B-9A18-467C-A027-70E5FFDCF690}|FlightManagementSystem\\FlightManagementSystem.API.csproj|d:\\projects\\coding battle cdc\\flightmanagementsystem\\flightmanagementsystem\\controllers\\aircraftcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{690E683B-9A18-467C-A027-70E5FFDCF690}|FlightManagementSystem\\FlightManagementSystem.API.csproj|solutionrelative:flightmanagementsystem\\controllers\\aircraftcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F4AA5DB-799C-4262-9DCE-06D789BADC1B}|FlightManagement.Service\\FlightManagementSystem.Service.csproj|d:\\projects\\coding battle cdc\\flightmanagementsystem\\flightmanagement.service\\aircraftservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F4AA5DB-799C-4262-9DCE-06D789BADC1B}|FlightManagement.Service\\FlightManagementSystem.Service.csproj|solutionrelative:flightmanagement.service\\aircraftservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E810C-A63D-4B11-897B-9E025E0FBB71}|FlightManagementSystem.Infrastructure\\FlightManagementSystem.Infrastructure.csproj|d:\\projects\\coding battle cdc\\flightmanagementsystem\\flightmanagementsystem.infrastructure\\repositories\\aircraftrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F2E810C-A63D-4B11-897B-9E025E0FBB71}|FlightManagementSystem.Infrastructure\\FlightManagementSystem.Infrastructure.csproj|solutionrelative:flightmanagementsystem.infrastructure\\repositories\\aircraftrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F2E810C-A63D-4B11-897B-9E025E0FBB71}|FlightManagementSystem.Infrastructure\\FlightManagementSystem.Infrastructure.csproj|d:\\projects\\coding battle cdc\\flightmanagementsystem\\flightmanagementsystem.infrastructure\\flightmanagementsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F2E810C-A63D-4B11-897B-9E025E0FBB71}|FlightManagementSystem.Infrastructure\\FlightManagementSystem.Infrastructure.csproj|solutionrelative:flightmanagementsystem.infrastructure\\flightmanagementsystemdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F8E1E41-D9E9-4774-9D87-3D0F6A16D7DB}|FlightManagement.Domain\\FlightManagementSystem.Domain.csproj|d:\\projects\\coding battle cdc\\flightmanagementsystem\\flightmanagement.domain\\airport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F8E1E41-D9E9-4774-9D87-3D0F6A16D7DB}|FlightManagement.Domain\\FlightManagementSystem.Domain.csproj|solutionrelative:flightmanagement.domain\\airport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{690E683B-9A18-467C-A027-70E5FFDCF690}|FlightManagementSystem\\FlightManagementSystem.API.csproj|d:\\projects\\coding battle cdc\\flightmanagementsystem\\flightmanagementsystem\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{690E683B-9A18-467C-A027-70E5FFDCF690}|FlightManagementSystem\\FlightManagementSystem.API.csproj|solutionrelative:flightmanagementsystem\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{690E683B-9A18-467C-A027-70E5FFDCF690}|FlightManagementSystem\\FlightManagementSystem.API.csproj|d:\\projects\\coding battle cdc\\flightmanagementsystem\\flightmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{690E683B-9A18-467C-A027-70E5FFDCF690}|FlightManagementSystem\\FlightManagementSystem.API.csproj|solutionrelative:flightmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\Coding Battle CDC\\FlightManagementSystem\\FlightManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "FlightManagementSystem\\Program.cs",
+              "ToolTip": "D:\\Projects\\Coding Battle CDC\\FlightManagementSystem\\FlightManagementSystem\\Program.cs",
+              "RelativeToolTip": "FlightManagementSystem\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T02:15:48.536Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "D:\\Projects\\Coding Battle CDC\\FlightManagementSystem\\FlightManagementSystem\\Startup.cs",
+              "RelativeDocumentMoniker": "FlightManagementSystem\\Startup.cs",
+              "ToolTip": "D:\\Projects\\Coding Battle CDC\\FlightManagementSystem\\FlightManagementSystem\\Startup.cs",
+              "RelativeToolTip": "FlightManagementSystem\\Startup.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACEAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T12:00:03.194Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Airport.cs",
+              "DocumentMoniker": "D:\\Projects\\Coding Battle CDC\\FlightManagementSystem\\FlightManagement.Domain\\Airport.cs",
+              "RelativeDocumentMoniker": "FlightManagement.Domain\\Airport.cs",
+              "ToolTip": "D:\\Projects\\Coding Battle CDC\\FlightManagementSystem\\FlightManagement.Domain\\Airport.cs",
+              "RelativeToolTip": "FlightManagement.Domain\\Airport.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T12:52:51.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FlightManagementSystemDbContext.cs",
+              "DocumentMoniker": "D:\\Projects\\Coding Battle CDC\\FlightManagementSystem\\FlightManagementSystem.Infrastructure\\FlightManagementSystemDbContext.cs",
+              "RelativeDocumentMoniker": "FlightManagementSystem.Infrastructure\\FlightManagementSystemDbContext.cs",
+              "ToolTip": "D:\\Projects\\Coding Battle CDC\\FlightManagementSystem\\FlightManagementSystem.Infrastructure\\FlightManagementSystemDbContext.cs",
+              "RelativeToolTip": "FlightManagementSystem.Infrastructure\\FlightManagementSystemDbContext.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAYwDsAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T12:50:09.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AircraftRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\Coding Battle CDC\\FlightManagementSystem\\FlightManagementSystem.Infrastructure\\Repositories\\AircraftRepository.cs",
+              "RelativeDocumentMoniker": "FlightManagementSystem.Infrastructure\\Repositories\\AircraftRepository.cs",
+              "ToolTip": "D:\\Projects\\Coding Battle CDC\\FlightManagementSystem\\FlightManagementSystem.Infrastructure\\Repositories\\AircraftRepository.cs",
+              "RelativeToolTip": "FlightManagementSystem.Infrastructure\\Repositories\\AircraftRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T12:46:58.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AircraftService.cs",
+              "DocumentMoniker": "D:\\Projects\\Coding Battle CDC\\FlightManagementSystem\\FlightManagement.Service\\AircraftService.cs",
+              "RelativeDocumentMoniker": "FlightManagement.Service\\AircraftService.cs",
+              "ToolTip": "D:\\Projects\\Coding Battle CDC\\FlightManagementSystem\\FlightManagement.Service\\AircraftService.cs",
+              "RelativeToolTip": "FlightManagement.Service\\AircraftService.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAApwC8AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T12:43:50.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AircraftController.cs",
+              "DocumentMoniker": "D:\\Projects\\Coding Battle CDC\\FlightManagementSystem\\FlightManagementSystem\\Controllers\\AircraftController.cs",
+              "RelativeDocumentMoniker": "FlightManagementSystem\\Controllers\\AircraftController.cs",
+              "ToolTip": "D:\\Projects\\Coding Battle CDC\\FlightManagementSystem\\FlightManagementSystem\\Controllers\\AircraftController.cs",
+              "RelativeToolTip": "FlightManagementSystem\\Controllers\\AircraftController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T12:43:10.392Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

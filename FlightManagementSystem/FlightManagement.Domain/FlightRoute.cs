@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FlightManagementSystem.Domain
+{
+    public class FlightRoute
+    {
+        public int Id { get; set; }
+        public int DepartAirport { get; set; }
+        public int DestinationAirport { get; set; }
+        public int AircraftId { get; set; }
+        public DateTime Schedule { get; set; }
+
+        public virtual Airport DepAirport { get; set; }
+        public virtual Airport DestAirport { get; set; }
+        public virtual Aircraft Aircraft { get; set; }
+    }
+}

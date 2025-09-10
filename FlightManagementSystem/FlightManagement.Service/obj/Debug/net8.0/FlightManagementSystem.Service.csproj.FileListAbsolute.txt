@@ -1,0 +1,17 @@
+D:\Projects\Coding Battle CDC\FlightManagementSystem\FlightManagement.Service\bin\Debug\net8.0\FlightManagementSystem.Service.deps.json
+D:\Projects\Coding Battle CDC\FlightManagementSystem\FlightManagement.Service\bin\Debug\net8.0\FlightManagementSystem.Service.runtimeconfig.json
+D:\Projects\Coding Battle CDC\FlightManagementSystem\FlightManagement.Service\bin\Debug\net8.0\FlightManagementSystem.Service.dll
+D:\Projects\Coding Battle CDC\FlightManagementSystem\FlightManagement.Service\bin\Debug\net8.0\FlightManagementSystem.Service.pdb
+D:\Projects\Coding Battle CDC\FlightManagementSystem\FlightManagement.Service\bin\Debug\net8.0\FlightManagementSystem.Domain.dll
+D:\Projects\Coding Battle CDC\FlightManagementSystem\FlightManagement.Service\bin\Debug\net8.0\FlightManagementSystem.Domain.pdb
+D:\Projects\Coding Battle CDC\FlightManagementSystem\FlightManagement.Service\obj\Debug\net8.0\FlightManagementSystem.Service.csproj.AssemblyReference.cache
+D:\Projects\Coding Battle CDC\FlightManagementSystem\FlightManagement.Service\obj\Debug\net8.0\FlightManagementSystem.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Coding Battle CDC\FlightManagementSystem\FlightManagement.Service\obj\Debug\net8.0\FlightManagementSystem.Service.AssemblyInfoInputs.cache
+D:\Projects\Coding Battle CDC\FlightManagementSystem\FlightManagement.Service\obj\Debug\net8.0\FlightManagementSystem.Service.AssemblyInfo.cs
+D:\Projects\Coding Battle CDC\FlightManagementSystem\FlightManagement.Service\obj\Debug\net8.0\FlightManagementSystem.Service.csproj.CoreCompileInputs.cache
+D:\Projects\Coding Battle CDC\FlightManagementSystem\FlightManagement.Service\obj\Debug\net8.0\FlightMa.CB8E8C07.Up2Date
+D:\Projects\Coding Battle CDC\FlightManagementSystem\FlightManagement.Service\obj\Debug\net8.0\FlightManagementSystem.Service.dll
+D:\Projects\Coding Battle CDC\FlightManagementSystem\FlightManagement.Service\obj\Debug\net8.0\refint\FlightManagementSystem.Service.dll
+D:\Projects\Coding Battle CDC\FlightManagementSystem\FlightManagement.Service\obj\Debug\net8.0\FlightManagementSystem.Service.pdb
+D:\Projects\Coding Battle CDC\FlightManagementSystem\FlightManagement.Service\obj\Debug\net8.0\FlightManagementSystem.Service.genruntimeconfig.cache
+D:\Projects\Coding Battle CDC\FlightManagementSystem\FlightManagement.Service\obj\Debug\net8.0\ref\FlightManagementSystem.Service.dll
