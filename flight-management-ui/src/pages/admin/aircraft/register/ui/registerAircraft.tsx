@@ -30,9 +30,6 @@ export default function RegisterAircraftForm() {
 
   return (
     <Card className="max-w-md mx-auto p-6">
-      <CardHeader>
-        <h2 className="text-xl font-semibold">Register Aircraft</h2>
-      </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <div>
