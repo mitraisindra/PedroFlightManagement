@@ -45,8 +45,8 @@ namespace FlightManagementSystem.Service
                 _logger.LogInfo("AddAircraft Begin", methodName, aircraftDTO.AircraftCode);
                 (Aircraft AddedAircraft, bool IsExist) = await _aircraftRepository.Add(aircraft);
                 _logger.LogInfo("AddAircraft End", methodName, aircraftDTO.AircraftCode);
-                var addedEmployee = _mapper.Map<Aircraft, AircraftDTO>(AddedAircraft);
-                return (addedEmployee, IsExist);
+                var addedAircraft = _mapper.Map<Aircraft, AircraftDTO>(AddedAircraft);
+                return (addedAircraft, IsExist);
             }
             catch (Exception ex)
             {

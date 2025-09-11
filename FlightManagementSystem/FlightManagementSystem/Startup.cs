@@ -51,7 +51,7 @@ namespace FlightManagementSystem
 
             // Configure App service
             services.AddScoped<IAircraftService, AircraftService>();
-            //services.AddScoped<, AircraftService>();
+            services.AddScoped<IAirportService, AirportService>();
             //services.AddScoped<IAircraftService, AircraftService>();
             //services.AddScoped<IAircraftService, AircraftService>();
             //services.AddScoped<IAircraftService, AircraftService>();
@@ -59,8 +59,8 @@ namespace FlightManagementSystem
 
             // Configure App Repository
             services.AddScoped<IAircraftRepository, AircraftRepository>();
-            //services.AddScoped<IAircraftRepository, AircraftRepository>();
-            //services.AddScoped<IAircraftRepository, AircraftRepository>();
+            services.AddScoped<IAirportRepository, AirportRepository>();
+            services.AddScoped<IRegionRepository, RegionRepository>();
             //services.AddScoped<IAircraftRepository, AircraftRepository>();
             //services.AddScoped<IAircraftRepository, AircraftRepository>();
             //services.AddScoped<IAircraftRepository, AircraftRepository>();

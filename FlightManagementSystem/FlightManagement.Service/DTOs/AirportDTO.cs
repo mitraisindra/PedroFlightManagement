@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlightManagementSystem.Domain;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -15,5 +16,6 @@ namespace FlightManagementSystem.Service.DTOs
         public int? RegionId { get; set; }
         public string UsageClass { get; set; }
         public string AirportName { get; set; }
+        public RegionDTO RegionDTO { get; set; }
     }
 }

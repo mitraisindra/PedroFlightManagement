@@ -19,7 +19,7 @@ namespace FlightManagementSystem.Infrastructure.Helpers
             CreateMap<AircraftDTO, Aircraft>();
 
             CreateMap<Airport, AirportDTO>();
-            CreateMap<AircraftDTO, Aircraft>();
+            CreateMap<AirportDTO, Airport>();
 
             CreateMap<FlightRoute, FlightRouteDTO>();
             CreateMap<FlightRouteDTO, FlightRoute>();

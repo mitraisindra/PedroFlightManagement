@@ -24,7 +24,7 @@ namespace FlightManagementSystem.Controllers
         [HttpPost(Name = "AddAircraft")]
         public async Task<ActionResult<AircraftDTO>> AddAircraft(AircraftDTO aircraftDTO)
         {
-            (AircraftDTO addedAircraft, bool IsExist) = await _aircraftService.AddAircraft(aircraftDTO);
+            (AircraftDTO? addedAircraft, bool IsExist) = await _aircraftService.AddAircraft(aircraftDTO);
             if (addedAircraft == null)
             {
                 return BadRequest("AddedAircraft Can Not Added");
