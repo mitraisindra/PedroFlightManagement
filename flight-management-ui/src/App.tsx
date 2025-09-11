@@ -4,6 +4,7 @@ import AdminLayout from "@/pages/admin/AdminLayout";
 import AdminDashboard from "@/pages/admin/AdminDashboard";
 import UserLayout from "@/pages/user/UserLayout";
 import UserDashboard from "@/pages/user/UserDashboard";
+import BookingPage from "./pages/booking/bookingPage";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         {/* User area */}
         <Route path="/user" element={<UserLayout />}>
           <Route index element={<UserDashboard />} />
+          <Route path="booking" element={<BookingPage />} />
           {/* more user routes later */}
         </Route>
 
