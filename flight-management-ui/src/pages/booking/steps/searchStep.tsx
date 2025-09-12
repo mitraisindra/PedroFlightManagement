@@ -14,13 +14,20 @@ export default function SearchStep({ onNext }: Props) {
   const [date, setDate] = useState("");
   const [passengers, setPassengers] = useState(1);
 
+  const handleNext = () => {
+    if (!from  || passengers < 1) {
+      alert("Please fill all fields correctly.");
+      return;
+    }
+    onNext({ from, to, date, passengers });
+  };
+
   return (
     <div className="max-w-md mx-auto space-y-6 bg-white p-6 rounded-2xl shadow">
       <h2 className="text-xl font-bold text-center text-indigo-600">
         Search Flights
       </h2>
 
-      {/* From */}
       <div className="relative">
         <PlaneTakeoff className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
         <Input
@@ -31,7 +38,6 @@ export default function SearchStep({ onNext }: Props) {
         />
       </div>
 
-      {/* To */}
       <div className="relative">
         <PlaneLanding className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
         <Input
@@ -42,7 +48,6 @@ export default function SearchStep({ onNext }: Props) {
         />
       </div>
 
-      {/* Date */}
       <div className="relative">
         <Calendar className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
         <Input
@@ -53,7 +58,6 @@ export default function SearchStep({ onNext }: Props) {
         />
       </div>
 
-      {/* Passengers */}
       <div className="relative">
         <Users className="absolute left-3 top-3 h-5 w-5 text-gray-400" />
         <Input
@@ -65,18 +69,7 @@ export default function SearchStep({ onNext }: Props) {
         />
       </div>
 
-      {/* Submit */}
-      <Button
-        className="w-full bg-blue-600 hover:bg-blue-700"
-        onClick={() =>
-          onNext({
-            from,
-            to,
-            date,
-            passengers,
-          })
-        }
-      >
+      <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={handleNext}>
         Search Flights
       </Button>
     </div>

@@ -24,10 +24,14 @@ export interface BookingData {
     arriveTime: string;
     arriveAirport: string;
     duration: string;
+    seat: string;
     price: number;
-  };
+  }[];
   details?: {
-    name: string;
+    firstName: string;
+    lastName: string;
+    nik: string;
+    dob: string;
     email: string;
     phone: string;
   };
@@ -67,6 +71,7 @@ export default function BookingPage() {
 
         {step === "flights" && (
         <FlightsStep
+            search={bookingData.search}
             onNext={(flight) => {
             setBookingData((prev) => ({ ...prev, flight }));
             setStep("details");
@@ -74,6 +79,7 @@ export default function BookingPage() {
             onBack={() => setStep("search")}
         />
         )}
+
 
         {step === "details" && (
         <DetailsStep
