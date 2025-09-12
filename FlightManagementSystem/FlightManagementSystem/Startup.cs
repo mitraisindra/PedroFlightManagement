@@ -28,6 +28,8 @@ namespace FlightManagementSystem
                 string[] allowedOrigins = {
                     "https://localhost:8080",
                     "https://localhost:5173",
+                    "http://localhost:8080",
+                    "http://localhost:5173",
                 };
                 options.AddPolicy("MyDefaultPolicy", builder =>
                 {
