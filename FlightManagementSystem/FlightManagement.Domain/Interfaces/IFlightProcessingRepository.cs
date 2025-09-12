@@ -11,5 +11,7 @@ namespace FlightManagementSystem.Domain.Interfaces
         Task<(ReservationFlight, bool)> Add(ReservationFlight flightProcessing);
         ReservationFlight? GetFlightProcessingByBookingId(string bookingId);
         IEnumerable<FlightAvailSeatsCount> GetFlightAvailSeatsCount(List<FlightRoute> flightSearchResults, int totalSeatsNeeded);
+        Task<(ReservationFlight, bool)> Update(ReservationFlight flightProcessing);
+        Task<ReservationFlight?> GetReservationFlightById(int reservationFlightId);
     }
 }

@@ -13,7 +13,9 @@ namespace FlightManagementSystem.Domain.Enums
         Booked = 1,
         [Description("Boarded a Flight")]
         Boarded = 2,
+        [Description("Departed a Flight")]
+        Departed = 3,
         [Description("Flight Canceled")]
-        Canceled = 3
+        Canceled = 4
     }
 }

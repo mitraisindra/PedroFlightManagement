@@ -55,40 +55,48 @@ namespace FlightManagementSystem.Service
             }
         }
 
-        //public async Task<ReservationFlightDTO?> GetFlightProcessingById(int id)
-        //{
-        //    string methodName = "FlightProcessingService.GetFlightProcessingById";
-        //    try
-        //    {
-        //        _logger.LogInfo("GetFlightProcessingById Begin", methodName, id);
-        //        var flightProcessing = await _flightProcessingRepository.GetById(id);
-        //        _logger.LogInfo("GetFlightProcessingById End", methodName, id);
-        //        var flightProcessingDTO = _mapper.Map<ReservationFlight, ReservationFlightDTO>(flightProcessing);
-        //        return flightProcessingDTO;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _logger.LogError(ex);
-        //        return null;
-        //    }
-        //}
+        public async Task<(ReservationFlightDTO?, bool)> UpdateReservationFlight(ReservationFlightDTO reservationFlightDto)
+        {
+            string methodName = "ReservationFlight.UpdateReservationFlight";
+            try
+            {
+                if (reservationFlightDto.Id <= 0)
+                {
+                    _logger.LogWarn("UpdateReservationFlight ID has to be valid", methodName);
+                    return (null, false);
+                }
 
-        //public async Task<List<ReservationFlightDTO>> GetFlightProcessingsByFilter()
-        //{
-        //    string methodName = "FlightProcessingService.GetAllFlightProcessings";
-        //    try
-        //    {
-        //        _logger.LogInfo("GetAllFlightProcessings Begin", methodName);
-        //        var flightProcessings = await _flightProcessingRepository.GetAll();
-        //        _logger.LogInfo("GetAllFlightProcessings End", methodName);
-        //        var flightProcessingsDTO = _mapper.Map<List<ReservationFlight>, List<ReservationFlightDTO>>(flightProcessings);
-        //        return flightProcessingsDTO;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _logger.LogError(ex);
-        //        return new List<ReservationFlightDTO>();
-        //    }
-        //}
+                var reservationFlight = _mapper.Map<ReservationFlightDTO, ReservationFlight>(reservationFlightDto);
+
+                _logger.LogInfo("UpdateReservationFlight Begin", methodName, reservationFlight.Id.ToString());
+                var (updatedReservationFlight, isSuccess) = await _flightProcessingRepository.Update(reservationFlight);
+                _logger.LogInfo("UpdateReservationFlight End", methodName, reservationFlight.Id.ToString());
+                var updatedReservationFlightDTO = _mapper.Map<ReservationFlight, ReservationFlightDTO>(updatedReservationFlight);
+                return (updatedReservationFlightDTO, isSuccess);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex);
+                return (null, false);
+            }
+        }
+
+        public async Task<ReservationFlightDTO?> GetFlightProcessingById(int id)
+        {
+            string methodName = "FlightProcessingService.GetFlightProcessingById";
+            try
+            {
+                _logger.LogInfo("GetFlightProcessingById Begin", methodName, id.ToString());
+                var flightProcessing = await _flightProcessingRepository.GetReservationFlightById(id);
+                _logger.LogInfo("GetFlightProcessingById End", methodName, id.ToString());
+                var flightProcessingDTO = _mapper.Map<ReservationFlight, ReservationFlightDTO>(flightProcessing);
+                return flightProcessingDTO;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex);
+                return null;
+            }
+        }
     }
 }

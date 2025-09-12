@@ -11,6 +11,7 @@ namespace FlightManagementSystem.Service.Interfaces
     public interface IFlightProcessingService
     {
         Task<(ReservationFlightDTO?, bool)> AddFlightProcessing(ReservationFlightDTO flightProcessingDTO);
-
+        Task<(ReservationFlightDTO?, bool)> UpdateReservationFlight(ReservationFlightDTO reservationFlightDto);
+        Task<ReservationFlightDTO?> GetFlightProcessingById(int id);
     }
 }

@@ -18,9 +18,9 @@ namespace FlightManagementSystem.Domain
         public string Title { get; set; }
         public string Province { get; set; }
         public string PhoneNumber { get; set; }
-        public DateTime CreatedOn { get; set; }
+        public DateTime CreatedOn { get; set; } = DateTime.Now;
         public string CreatedBy { get; set; }
-        public DateTime ModifiedOn { get; set; }
+        public DateTime ModifiedOn { get; set; } = DateTime.Now;
         public string ModifiedBy { get; set; }
         public virtual ICollection<ReservationFlight>? ReservationFlights { get; set; }
     }

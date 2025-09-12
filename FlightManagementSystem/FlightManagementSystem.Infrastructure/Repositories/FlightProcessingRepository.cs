@@ -68,5 +68,31 @@ namespace FlightManagementSystem.Infrastructure.Repositories
 
             return flightAvailSeatsCount;
         }
+
+        public async Task<(ReservationFlight, bool)> Update(ReservationFlight flightProcessing)
+        {
+            var existingReservationFlight = await GetReservationFlightById(flightProcessing.Id);
+            if (existingReservationFlight == null)
+            {
+                // existing ReservationFlight not found
+                return (new ReservationFlight(), false);
+            }
+
+            existingReservationFlight.FlightStatus = flightProcessing.FlightStatus;
+            existingReservationFlight.NumberSeat = flightProcessing.NumberSeat;
+            existingReservationFlight.FlightRouteIds = flightProcessing.FlightRouteIds;
+            existingReservationFlight.ModifiedOn = DateTime.Now;
+            existingReservationFlight.ModifiedBy = flightProcessing.ModifiedBy;
+
+            await _context.SaveChangesAsync();
+
+            return (existingReservationFlight, true);
+        }
+
+        public async Task<ReservationFlight?> GetReservationFlightById(int reservationFlightId)
+        {
+            var reservationFlight = await _context.ReservationFlight.FindAsync(reservationFlightId);
+            return reservationFlight;
+        }
     }
 }

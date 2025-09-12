@@ -54,8 +54,6 @@ namespace FlightManagementSystem
             services.AddScoped<IAirportService, AirportService>();
             services.AddScoped<IFlightRouteService, FlightRouteService>();
             services.AddScoped<IFlightProcessingService, FlightProcessingService>();
-            //services.AddScoped<IAircraftService, AircraftService>();
-            //services.AddScoped<IAircraftService, AircraftService>();
 
             // Configure App Repository
             services.AddScoped<IAircraftRepository, AircraftRepository>();
@@ -63,7 +61,6 @@ namespace FlightManagementSystem
             services.AddScoped<IRegionRepository, RegionRepository>();
             services.AddScoped<IFlightRouteRepository, FlightRouteRepository>();
             services.AddScoped<IFlightProcessingRepository, FlightProcessingRepository>();
-            //services.AddScoped<IAircraftRepository, AircraftRepository>();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

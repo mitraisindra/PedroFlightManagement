@@ -6,7 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 namespace FlightManagementSystem.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     public class FlightRouteController : ControllerBase
     {
         private readonly IFlightRouteService _flightRouteService;
@@ -20,7 +20,7 @@ namespace FlightManagementSystem.Controllers
         /// <summary>
         /// Use this function to add a FlightRoute
         /// </summary>
-        /// <param name="flightRouteDTO">>FlightRouteDTO Object</param>
+        /// <param name="flightRouteDTO">FlightRouteDTO Object</param>
         /// <returns>>Task ActionResult of added FlightRouteDTO</returns>
         [HttpPost(Name = "AddFlightRoute")]
         public async Task<ActionResult<FlightRouteDTO>> AddFlightRoute(FlightRouteDTO flightRouteDTO)
@@ -41,7 +41,7 @@ namespace FlightManagementSystem.Controllers
         /// <summary>
         /// Use this function to get Available Flight Route
         /// </summary>
-        /// <param name="flightSearchFilterDTO">>FlightSearchFilterDTO Object</param>
+        /// <param name="flightSearchFilterDTO">FlightSearchFilterDTO Object</param>
         /// <returns>>Task ActionResult of filtered FlightRouteDTO</returns>
         [HttpPost(Name = "GetAvailableFlightRouteByFilter")]
         public ActionResult<List<FlightRouteDTO>> GetAvailableFlightRouteByFilter(FlightSearchFilterDTO flightSearchFilterDTO)
