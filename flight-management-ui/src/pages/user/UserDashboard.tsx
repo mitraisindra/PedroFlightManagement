@@ -10,11 +10,17 @@ const actions = [
     path: "/user/booking",
   },
   {
-    title: "Cancel A Booking",
-    icon: Ticket,
-    desc: "Cancel an existing booking.",
-    path: "/user/cancel",    
+  title: "My Bookings",
+  icon: Ticket,
+  desc: "View and cancel your bookings.",
+  path: "/user/my-bookings",
   },
+  // {
+  //   title: "Cancel A Booking",
+  //   icon: Ticket,
+  //   desc: "Cancel an existing booking.",
+  //   path: "/user/cancel",    
+  // },
   {
     title: "Exit",
     icon: LogOut,

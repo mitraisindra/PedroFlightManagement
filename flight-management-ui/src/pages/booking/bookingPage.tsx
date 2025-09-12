@@ -7,6 +7,13 @@ import SuccessStep from "./steps/successStep";
 
 export type BookingStep = "search" | "flights" | "details" | "confirm" | "success";
 
+export interface BookingRecord {
+  id: string;
+  flight: NonNullable<BookingData["flight"]>;
+  details: NonNullable<BookingData["details"]>;
+  status: "BOOKED" | "CANCELLED" | "BOARDING" | "ARRIVED";
+}
+
 export interface BookingData {
   search?: {
     from: string;

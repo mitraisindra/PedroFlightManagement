@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import {
   Plane,
   MapPin,
   Route,
-  ClipboardList,
+  // ClipboardList,
   FastForward,
   PlayCircle,
   LogOut,
@@ -17,23 +18,33 @@ const actions = [
   { title: "Register Aircraft", icon: Plane, desc: "Add a new aircraft to the system." },
   { title: "Add Destination", icon: MapPin, desc: "Define a new airport or city destination." },
   { title: "Create Flight Route", icon: Route, desc: "Set up a route between two destinations." },
-  { title: "Run Booking Service", icon: ClipboardList, desc: "Enable passengers to book flights." },
+  // { title: "Run Booking Service", icon: ClipboardList, desc: "Enable passengers to book flights." },
   { title: "Go to Next Day", icon: FastForward, desc: "Advance system to the next day." },
-  { title: "Run Flight", icon: PlayCircle, desc: "Execute scheduled flights." },
+  // { title: "Run Flight", icon: PlayCircle, desc: "Execute scheduled flights." },
+  { title: "Manage Flight Status", icon: PlayCircle, desc: "Track and update flight execution (Scheduled → Arrived).", path: "/admin/flight-status"},
   { title: "Exit", icon: LogOut, desc: "Exit the admin panel." },
 ];
 
 export default function AdminDashboard() {
   const [openModal, setOpenModal] = useState<string | null>(null);
+  const navigate = useNavigate();
+
+  const handleActionClick = (title: string, path?: string) => {
+    if (path) {
+      navigate(path);
+    } else {
+      setOpenModal(title);
+    }
+  };
 
   return (
     <div className="p-8">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {actions.map(({ title, icon: Icon, desc }) => (
+        {actions.map(({ title, icon: Icon, desc, path }) => (
           <Card
             key={title}
             className="p-6 hover:shadow-lg transition cursor-pointer"
-            onClick={() => setOpenModal(title)}
+            onClick={() => handleActionClick(title, path)}
           >
             <div className="flex flex-col items-center text-center">
               <Icon className="w-10 h-10 text-indigo-600 mb-3" />
