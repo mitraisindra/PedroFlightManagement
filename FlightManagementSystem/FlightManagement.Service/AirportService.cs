@@ -66,5 +66,29 @@ namespace FlightManagementSystem.Service
                 return (null, false);
             }
         }
+
+        public async Task<List<AirportDTO>> GetAllAirport()
+        {
+            string methodName = "AirportService.GetAllAirport";
+            try
+            {
+                _logger.LogInfo("GetAllAirport Begin", methodName, "");
+                var allAirports = await _airportRepository.GetAll();
+                var allAirportsDTO = new List<AirportDTO>();
+                allAirports.ForEach(x => {
+                    var newObj = _mapper.Map<Airport, AirportDTO>(x);
+                    newObj.RegionDTO = _mapper.Map<Region, RegionDTO>(x.Region);
+                    allAirportsDTO.Add(newObj);
+                });
+                 
+                _logger.LogInfo("GetAllAirport End", methodName, "");
+                return allAirportsDTO;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex);
+                return new List<AirportDTO>();
+            }
+        }
     }
 }

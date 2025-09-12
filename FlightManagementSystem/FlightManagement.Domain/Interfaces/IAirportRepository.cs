@@ -10,5 +10,6 @@ namespace FlightManagementSystem.Domain.Interfaces
     {
         Task<(Airport, bool)> Add(Airport airport);
         Airport? GetAirportByIATACode(string airportIATACode);
+        Task<List<Airport>> GetAll();
     }
 }

@@ -10,6 +10,7 @@ namespace FlightManagementSystem.Domain.Interfaces
     {
         Task<(Region, bool)> Add(Region region);
         Region? GetRegionByName(string regionName);
+        Region? GetRegionById(int id);
         IEnumerable<Region> GetAllRegions();
     }
 }

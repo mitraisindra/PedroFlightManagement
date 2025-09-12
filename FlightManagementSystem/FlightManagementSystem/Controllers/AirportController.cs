@@ -20,7 +20,6 @@ namespace FlightManagementSystem.API.Controllers
         /// Use this function to add a Airport and their Region
         /// </summary>
         /// <param name="airportDTO">>AirportDTO Object</param>
-        /// <param name="regionDTO">>RegionDTO Object</param>
         /// <returns>>Task ActionResult of added AirportDTO</returns>
         [HttpPost(Name = "AddAirport")]
         public async Task<ActionResult<AirportDTO>> AddAirport(AirportDTO airportDTO)
@@ -36,6 +35,18 @@ namespace FlightManagementSystem.API.Controllers
             }
 
             return Ok(addedAirport);
+        }
+
+        /// <summary>
+        /// Use this function to get all Airport and their Region
+        /// </summary>
+        /// <returns>>Task ActionResult of added AirportDTO</returns>
+        [HttpGet(Name = "GetAllAirport")]
+        public async Task<ActionResult<List<AirportDTO>>> GetAllAirport()
+        {
+            var allAirports = await _airportService.GetAllAirport();
+
+            return Ok(allAirports);
         }
     }
 }

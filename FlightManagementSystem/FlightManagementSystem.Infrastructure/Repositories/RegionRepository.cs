@@ -38,6 +38,12 @@ namespace FlightManagementSystem.Infrastructure.Repositories
             return regionList;
         }
 
+        public Region? GetRegionById(int id)
+        {
+            var region = _context.Region.Where(x => x.Id.Equals(id)).FirstOrDefault();
+            return region;
+        }
+
         public Region? GetRegionByName(string regionName)
         {
             var region = _context.Region.Where(x => x.RegionName.ToLower().Equals(regionName.ToLower())).FirstOrDefault();

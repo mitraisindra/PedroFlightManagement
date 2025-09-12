@@ -27,6 +27,7 @@ namespace FlightManagementSystem
             {
                 string[] allowedOrigins = {
                     "https://localhost:8080",
+                    "https://localhost:5173",
                 };
                 options.AddPolicy("MyDefaultPolicy", builder =>
                 {
@@ -61,6 +62,7 @@ namespace FlightManagementSystem
             services.AddScoped<IRegionRepository, RegionRepository>();
             services.AddScoped<IFlightRouteRepository, FlightRouteRepository>();
             services.AddScoped<IFlightProcessingRepository, FlightProcessingRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

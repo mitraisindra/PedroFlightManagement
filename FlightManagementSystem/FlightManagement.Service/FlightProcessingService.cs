@@ -16,15 +16,18 @@ namespace FlightManagementSystem.Service
     public partial class FlightProcessingService : ServiceBase, IFlightProcessingService
     {
         private readonly IFlightProcessingRepository _flightProcessingRepository;
+        private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
         private readonly ILoggerService _logger;
 
         public FlightProcessingService(
             IFlightProcessingRepository flightProcessingRepository,
+            IUserRepository userRepository,
             IMapper mapper, ILoggerService logger
             ) : base(mapper, logger)
         {
             _flightProcessingRepository = flightProcessingRepository;
+            _userRepository = userRepository;
             _mapper = mapper;
             _logger = logger;
         }
@@ -40,9 +43,27 @@ namespace FlightManagementSystem.Service
                     return (null, false);
                 }
 
+                if (!flightProcessingDTO.PassengerSeatsList.Any())
+                {
+                    _logger.LogWarn("Passenger identity has to be given", methodName);
+                    return (null, false);
+                }
+
                 var flightProcessing = _mapper.Map<ReservationFlightDTO, ReservationFlight>(flightProcessingDTO);
 
                 _logger.LogInfo("AddFlightProcessing Begin", methodName, flightProcessingDTO.FlightRouteIds);
+                
+                var passengerSeatIds = "[";
+                flightProcessingDTO.PassengerSeatsList.ForEach(async x =>
+                {
+                    var user = _mapper.Map<UserDTO, User>(x);
+                    await _userRepository.Add(user);
+                    passengerSeatIds += x.NIK + ",";
+                });
+                passengerSeatIds = passengerSeatIds.TrimEnd(',') + "]";
+
+                flightProcessing.PassengerSeats = passengerSeatIds;
+
                 (ReservationFlight AddedFlightProcessing, bool IsExist) = await _flightProcessingRepository.Add(flightProcessing);
                 _logger.LogInfo("AddFlightProcessing End", methodName, flightProcessingDTO.FlightRouteIds);
                 var addedFlightProcessing = _mapper.Map<ReservationFlight, ReservationFlightDTO>(AddedFlightProcessing);

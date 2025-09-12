@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace FlightManagementSystem.Infrastructure.Repositories
 {
@@ -37,6 +38,12 @@ namespace FlightManagementSystem.Infrastructure.Repositories
             var airport = _context.Airport.Where(x => x.IATA.ToLower().Equals(airportIATACode.ToLower())).FirstOrDefault();
             return airport;
 
+        }
+
+        public Task<List<Airport>> GetAll()
+        {
+            var airport = _context.Airport.Include(x => x.Region).ToListAsync();
+            return airport;
         }
     }
 }
