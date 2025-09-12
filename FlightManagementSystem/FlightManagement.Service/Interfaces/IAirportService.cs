@@ -9,6 +9,6 @@ namespace FlightManagementSystem.Service.Interfaces
 {
     public interface IAirportService
     {
-        public Task<(AirportDTO?, bool)> AddAirport(AirportDTO airportDTO);
+        Task<(AirportDTO?, bool)> AddAirport(AirportDTO airportDTO);
     }
 }

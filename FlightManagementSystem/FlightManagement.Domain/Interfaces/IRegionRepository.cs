@@ -8,8 +8,8 @@ namespace FlightManagementSystem.Domain.Interfaces
 {
     public interface IRegionRepository
     {
-        public Task<(Region, bool)> Add(Region region);
-        public Region? GetRegionByName(string regionName);
-        public IEnumerable<Region> GetAllRegions();
+        Task<(Region, bool)> Add(Region region);
+        Region? GetRegionByName(string regionName);
+        IEnumerable<Region> GetAllRegions();
     }
 }

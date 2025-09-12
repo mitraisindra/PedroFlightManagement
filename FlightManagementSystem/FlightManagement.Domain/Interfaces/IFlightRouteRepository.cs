@@ -8,7 +8,9 @@ namespace FlightManagementSystem.Domain.Interfaces
 {
     public interface IFlightRouteRepository
     {
-        public Task<(FlightRoute, bool)> Add(FlightRoute flightRoute);
-        public FlightRoute? GetFlightRoute(FlightRoute flightRoute);
+        Task<(FlightRoute, bool)> Add(FlightRoute flightRoute);
+        FlightRoute? GetFlightRoute(FlightRoute flightRoute);
+        List<FlightRoute> GetAvailableFlightRouteByFilter(DateTime departTime, string departRegion,
+                    string destRegion, int totalSeatsNeeded);
     }
 }

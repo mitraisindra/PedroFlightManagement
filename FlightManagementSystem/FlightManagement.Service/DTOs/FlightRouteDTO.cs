@@ -16,5 +16,6 @@ namespace FlightManagementSystem.Service.DTOs
         public AirportDTO? DepAirport { get; set; }
         public AirportDTO? DestAirport { get; set; }
         public AircraftDTO? Aircraft { get; set; }
+        public int? AvailSeatsCount { get; set; }
     }
 }

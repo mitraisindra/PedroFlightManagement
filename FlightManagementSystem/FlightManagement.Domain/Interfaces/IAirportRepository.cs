@@ -8,7 +8,7 @@ namespace FlightManagementSystem.Domain.Interfaces
 {
     public interface IAirportRepository
     {
-        public Task<(Airport, bool)> Add(Airport airport);
-        public Airport? GetAirportByIATACode(string airportIATACode);
+        Task<(Airport, bool)> Add(Airport airport);
+        Airport? GetAirportByIATACode(string airportIATACode);
     }
 }

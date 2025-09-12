@@ -8,7 +8,7 @@ namespace FlightManagementSystem.Domain.Interfaces
 {
     public interface IAircraftRepository
     {
-        public Task<(Aircraft, bool)> Add(Aircraft aircraft);
-        public Aircraft? GetAircraftByCode(string aircraftCode);
+        Task<(Aircraft, bool)> Add(Aircraft aircraft);
+        Aircraft? GetAircraftByCode(string aircraftCode);
     }
 }

@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace FlightManagementSystem.Service.Interfaces
 {
-    public interface IFlightRouteService
+    public interface IFlightProcessingService
     {
-        Task<(FlightRouteDTO?, bool)> AddFlightRoute(FlightRouteDTO flightRouteDTO);
-        List<FlightRouteDTO> GetAvailableFlightRouteByFilter(FlightSearchFilterDTO flightSearchFilterDTO);
+        Task<(ReservationFlightDTO?, bool)> AddFlightProcessing(ReservationFlightDTO flightProcessingDTO);
+
     }
 }

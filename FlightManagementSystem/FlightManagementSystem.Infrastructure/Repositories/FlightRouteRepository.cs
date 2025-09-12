@@ -40,5 +40,16 @@ namespace FlightManagementSystem.Infrastructure.Repositories
                 .FirstOrDefault();
             return flightRouteFound;
         }
+
+        public List<FlightRoute> GetAvailableFlightRouteByFilter(DateTime departTime, string departRegion, string destRegion, int totalSeatsNeeded)
+        {
+            var flightRoutesFound = _context.FlightRoute
+                .Where(x => x.Schedule.Date == departTime.Date
+                        && x.DepAirport.Region.RegionName.ToLower().Equals(departRegion.ToLower())
+                        && x.DestAirport.Region.RegionName.ToLower().Equals(destRegion.ToLower())
+                        && x.Aircraft.Capacity > totalSeatsNeeded)
+                .Select(x => x);
+            return flightRoutesFound.ToList();
+        }
     }
 }

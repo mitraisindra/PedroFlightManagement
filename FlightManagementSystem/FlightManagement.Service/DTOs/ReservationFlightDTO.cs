@@ -22,6 +22,6 @@ namespace FlightManagementSystem.Service.DTOs
 
         public List<FlightRouteDTO> FlightRoutesList { get; set; }
         public List<UserDTO> PassengerSeatsList { get; set; }
-        public UserDTO PassengerInChage { get; set; }
+        public UserDTO PassengerInCharge { get; set; }
     }
 }

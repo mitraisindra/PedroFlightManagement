@@ -16,15 +16,18 @@ namespace FlightManagementSystem.Service
     public partial class FlightRouteService : ServiceBase, IFlightRouteService
     {
         private readonly IFlightRouteRepository _flightRouteRepository;
+        private readonly IFlightProcessingRepository _flightProcessingRepository;
         private readonly IMapper _mapper;
         private readonly ILoggerService _logger;
 
         public FlightRouteService(
             IFlightRouteRepository flightRouteRepository,
+            IFlightProcessingRepository flightProcessingRepository,
             IMapper mapper, ILoggerService logger
             ) : base(mapper, logger)
         {
             _flightRouteRepository = flightRouteRepository;
+            _flightProcessingRepository = flightProcessingRepository;
             _mapper = mapper;
             _logger = logger;
         }
@@ -52,6 +55,38 @@ namespace FlightManagementSystem.Service
             {
                 _logger.LogError(ex);
                 return (null, false);
+            }
+        }
+
+        public List<FlightRouteDTO> GetAvailableFlightRouteByFilter(FlightSearchFilterDTO flightSearchFilterDTO)
+        {
+            string methodName = "FlightRouteService.GetAvailableFlightRouteByFilter";
+            try
+            {
+                _logger.LogInfo("GetAvailableFlightRouteByFilter Begin", methodName, flightSearchFilterDTO.DepartTime.ToString());
+                var flightSearchResults = _flightRouteRepository.GetAvailableFlightRouteByFilter(flightSearchFilterDTO.DepartTime, flightSearchFilterDTO.DepartRegion, 
+                    flightSearchFilterDTO.DestRegion, flightSearchFilterDTO.TotalSeatsNeeded);
+
+                var flightAvailSeatsCount = _flightProcessingRepository.GetFlightAvailSeatsCount(flightSearchResults, flightSearchFilterDTO.TotalSeatsNeeded).ToList();
+                var flightSearchResultsDTO = new List<FlightRouteDTO>();
+
+                flightSearchResults.ForEach(x =>
+                    {
+                        if (flightAvailSeatsCount.Any(s => x.Id == s.FlightRouteId)) {
+                            var newObj = _mapper.Map<FlightRoute, FlightRouteDTO>(x);
+                            newObj.AvailSeatsCount = flightAvailSeatsCount.FirstOrDefault(f => f.FlightRouteId == x.Id)?.AvailableSeatsCount ?? 0;
+                            flightSearchResultsDTO.Add(newObj);
+                        }
+                    });
+                
+
+                _logger.LogInfo("GetAvailableFlightRouteByFilter End", methodName, flightSearchFilterDTO.DepartTime.ToString());
+                return flightSearchResultsDTO;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex);
+                return new List<FlightRouteDTO>();
             }
         }
     }

@@ -1,6 +1,7 @@
 using FlightManagementSystem.Service.DTOs;
 using FlightManagementSystem.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 
 namespace FlightManagementSystem.Controllers
 {
@@ -35,6 +36,22 @@ namespace FlightManagementSystem.Controllers
             }
 
             return Ok(addedFlightRoute);
+        }
+
+        /// <summary>
+        /// Use this function to get Available Flight Route
+        /// </summary>
+        /// <param name="flightSearchFilterDTO">>FlightSearchFilterDTO Object</param>
+        /// <returns>>Task ActionResult of filtered FlightRouteDTO</returns>
+        [HttpPost(Name = "GetAvailableFlightRouteByFilter")]
+        public ActionResult<List<FlightRouteDTO>> GetAvailableFlightRouteByFilter(FlightSearchFilterDTO flightSearchFilterDTO)
+        {
+            if (flightSearchFilterDTO.DepartRegion.IsNullOrEmpty() || flightSearchFilterDTO.DestRegion.IsNullOrEmpty())
+            {
+                return BadRequest("Flight Search Filter Has To Be Setted");
+            }
+            var availableFlightRouteByFilter = _flightRouteService.GetAvailableFlightRouteByFilter(flightSearchFilterDTO);
+            return Ok(availableFlightRouteByFilter);
         }
     }
 }
